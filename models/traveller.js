@@ -12,9 +12,10 @@ Traveller.prototype.getJourneyEndLocations = function () {
      return journey.endLocation} )
   };
 
-
 Traveller.prototype.getJourneysByTransport = function (transport) {
-
+ return this.journeys.filter((journey) => {
+    return journey.transport === transport}
+ )
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
